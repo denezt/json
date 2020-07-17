@@ -1,0 +1,29 @@
+{
+    "title": "Employee",
+    "description": "Employee description",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier of an employee",
+            "type": "integer"
+        },
+        "name": {
+            "description": "Name of the employee",
+            "type": "string"
+        },
+        "age": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "skills": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": ["id", "name", "age"]
+}
